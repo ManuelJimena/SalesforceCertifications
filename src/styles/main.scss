@@ -1,0 +1,187 @@
+@import 'variables';
+@import 'certification-detail';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Salesforce Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: $sf-black;
+  background-color: $sf-white;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+// Navigation
+.navbar {
+  background-color: $sf-blue;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    color: $sf-white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  &__search {
+    flex: 1;
+    max-width: 400px;
+    margin: 0 2rem;
+
+    input {
+      width: 100%;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: $border-radius;
+    }
+  }
+}
+
+// Home page
+.home {
+  padding: 2rem 0;
+
+  &__filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__search {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    border: 1px solid $sf-gray;
+    border-radius: $border-radius;
+  }
+}
+
+// Category Filter
+.category-filter {
+  &__select {
+    padding: 0.5rem 1rem;
+    border: 1px solid $sf-gray;
+    border-radius: $border-radius;
+    min-width: 200px;
+  }
+}
+
+// Certification Cards
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.certification-card {
+  background: $sf-white;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  overflow: hidden;
+  transition: $transition;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  &__image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+
+  &__content {
+    padding: 1.5rem;
+  }
+
+  &__title {
+    color: $sf-blue;
+    margin-bottom: 0.5rem;
+  }
+
+  &__description {
+    color: $sf-gray;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  &__category {
+    display: inline-block;
+    background: $sf-light-blue;
+    color: $sf-dark-blue;
+    padding: 0.25rem 0.5rem;
+    border-radius: $border-radius;
+    font-size: 0.8rem;
+  }
+}
+
+// Footer
+.footer {
+  background-color: $sf-dark-blue;
+  color: $sf-white;
+  padding: 2rem 0;
+  margin-top: auto;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+  }
+
+  &__github {
+    color: $sf-white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    &:hover {
+      color: $sf-light-blue;
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: $tablet) {
+  .certifications-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: $mobile) {
+  .navbar {
+    &__search {
+      display: none;
+    }
+  }
+}
