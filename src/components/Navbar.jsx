@@ -13,12 +13,12 @@ function Navbar() {
     <nav className="navbar">
       <div className="container">
         <Link to="/" className="navbar__logo">
-          Salesforce Certifications
+          Certificaciones Salesforce
         </Link>
         <div className="navbar__search">
           <input
             type="text"
-            placeholder="Search certifications..."
+            placeholder="Buscar certificaciones..."
             value={searchQuery}
             onChange={handleSearch}
           />

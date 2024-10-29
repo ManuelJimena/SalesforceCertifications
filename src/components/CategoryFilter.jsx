@@ -9,7 +9,7 @@ function CategoryFilter({ selectedCategory, onCategoryChange }) {
         onChange={(e) => onCategoryChange(e.target.value)}
         className="category-filter__select"
       >
-        <option value="">All Categories</option>
+        <option value="">Todas las Categorías</option>
         {Object.entries(categories).map(([key, value]) => (
           <option key={key} value={value}>
             {value}

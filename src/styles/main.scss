@@ -15,9 +15,17 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 2rem;
+
+  @media (min-width: $large-desktop) {
+    max-width: 1680px;
+  }
+
+  @media (min-width: $xl-desktop) {
+    max-width: 1920px;
+  }
 }
 
 // Navigation
@@ -92,6 +100,14 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
+
+  @media (min-width: $large-desktop) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (min-width: $xl-desktop) {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 .certification-card {
@@ -102,6 +118,9 @@ body {
   transition: $transition;
   text-decoration: none;
   color: inherit;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 
   &:hover {
     transform: translateY(-5px);
@@ -116,6 +135,9 @@ body {
 
   &__content {
     padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
 
   &__title {
@@ -127,6 +149,7 @@ body {
     color: $sf-gray;
     font-size: 0.9rem;
     margin-bottom: 1rem;
+    flex: 1;
   }
 
   &__category {
@@ -167,21 +190,6 @@ body {
 
     &:hover {
       color: $sf-light-blue;
-    }
-  }
-}
-
-// Responsive Design
-@media (max-width: $tablet) {
-  .certifications-grid {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  }
-}
-
-@media (max-width: $mobile) {
-  .navbar {
-    &__search {
-      display: none;
     }
   }
 }
