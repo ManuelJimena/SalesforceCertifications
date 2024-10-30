@@ -10,13 +10,12 @@ export const categories = {
 };
 
 export const certifications = [
-  // ASSOCIATES
   {
     id: 'associate',
     title: 'Associate',
     category: categories.ASSOCIATES,
     description: 'Entry-level certification validating fundamental knowledge of the Salesforce platform',
-    image: '/images/associate.jpg',
+    image: 'https://drm--c.na114.content.force.com/servlet/servlet.ImageServer?id=0153k00000A5Mty&oid=00DF0000000gZsu&lastMod=1711130547000',
     examDetails: {
       questions: 60,
       passingScore: 65,
@@ -41,7 +40,7 @@ export const certifications = [
     title: 'AI Associate',
     category: categories.ASSOCIATES,
     description: 'Entry-level certification for AI fundamentals in Salesforce',
-    image: '/images/ai-associate.jpg',
+    image: 'https://drm--c.na114.content.force.com/servlet/servlet.ImageServer?id=0153k00000A5Mu3&oid=00DF0000000gZsu&lastMod=1711130547000',
     examDetails: {
       questions: 60,
       passingScore: 65,
@@ -65,7 +64,7 @@ export const certifications = [
     title: 'Marketing Associate',
     category: categories.ASSOCIATES,
     description: 'Entry-level certification for Marketing Cloud fundamentals',
-    image: '/images/marketing-associate.jpg',
+    image: 'https://drm--c.na114.content.force.com/servlet/servlet.ImageServer?id=0153k00000A5Mu8&oid=00DF0000000gZsu&lastMod=1711130547000',
     examDetails: {
       questions: 60,
       passingScore: 65,
@@ -84,14 +83,12 @@ export const certifications = [
       trailmix: 'https://trailhead.salesforce.com/content/learn/trails/marketing-cloud-basics'
     }
   },
-
-  // ADMINISTRATORS
   {
     id: 'administrator',
     title: 'Administrator',
     category: categories.ADMINISTRATORS,
     description: 'Core certification for Salesforce platform administration',
-    image: '/images/administrator.jpg',
+    image: 'https://drm--c.na114.content.force.com/servlet/servlet.ImageServer?id=0153k00000A5Mtn&oid=00DF0000000gZsu&lastMod=1711130547000',
     examDetails: {
       questions: 60,
       passingScore: 65,
@@ -117,7 +114,7 @@ export const certifications = [
     title: 'Advanced Administrator',
     category: categories.ADMINISTRATORS,
     description: 'Advanced certification for experienced Salesforce administrators',
-    image: '/images/advanced-administrator.jpg',
+    image: 'https://drm--c.na114.content.force.com/servlet/servlet.ImageServer?id=0153k00000A5Mto&oid=00DF0000000gZsu&lastMod=1711130547000',
     examDetails: {
       questions: 60,
       passingScore: 65,
@@ -143,7 +140,7 @@ export const certifications = [
     title: 'Platform App Builder',
     category: categories.ADMINISTRATORS,
     description: 'Certification for professionals who design and build custom applications',
-    image: '/images/platform-app-builder.jpg',
+    image: 'https://drm--c.na114.content.force.com/servlet/servlet.ImageServer?id=0153k00000A5Mts&oid=00DF0000000gZsu&lastMod=1711130547000',
     examDetails: {
       questions: 60,
       passingScore: 63,
@@ -168,7 +165,7 @@ export const certifications = [
     title: 'Slack Admin',
     category: categories.ADMINISTRATORS,
     description: 'Certification for Slack workspace administration and management',
-    image: '/images/slack-admin.jpg',
+    image: 'https://drm--c.na114.content.force.com/servlet/servlet.ImageServer?id=0153k00000A5Mtz&oid=00DF0000000gZsu&lastMod=1711130547000',
     examDetails: {
       questions: 60,
       passingScore: 65,
@@ -188,14 +185,12 @@ export const certifications = [
       trailmix: 'https://trailhead.salesforce.com/content/learn/trails/slack-admin'
     }
   },
-
-  // DESIGNERS
   {
     id: 'ux-designer',
     title: 'User Experience (UX) Designer',
     category: categories.DESIGNERS,
     description: 'Certification for professionals who design user experiences in Salesforce',
-    image: '/images/ux-designer.jpg',
+    image: 'https://drm--c.na114.content.force.com/servlet/servlet.ImageServer?id=0153k00000A5Mu1&oid=00DF0000000gZsu&lastMod=1711130547000',
     examDetails: {
       questions: 60,
       passingScore: 65,
@@ -220,7 +215,7 @@ export const certifications = [
     title: 'Strategy Designer',
     category: categories.DESIGNERS,
     description: 'Certification for professionals who design strategic solutions',
-    image: '/images/strategy-designer.jpg',
+    image: 'https://drm--c.na114.content.force.com/servlet/servlet.ImageServer?id=0153k00000A5Mu0&oid=00DF0000000gZsu&lastMod=1711130547000',
     examDetails: {
       questions: 60,
       passingScore: 65,
@@ -239,14 +234,12 @@ export const certifications = [
       trailmix: 'https://trailhead.salesforce.com/content/learn/trails/strategy-design'
     }
   },
-
-  // CONSULTANTS
   {
     id: 'service-cloud-consultant',
     title: 'Service Cloud Consultant',
     category: categories.CONSULTANTS,
     description: 'Certification for Service Cloud implementation experts',
-    image: '/images/service-cloud-consultant.jpg',
+    image: 'https://drm--c.na114.content.force.com/servlet/servlet.ImageServer?id=0153k00000A5Mtu&oid=00DF0000000gZsu&lastMod=1711130547000',
     examDetails: {
       questions: 60,
       passingScore: 67,
@@ -265,12 +258,9 @@ export const certifications = [
       trailhead: 'https://trailhead.salesforce.com/credentials/service-cloud-consultant',
       trailmix: 'https://trailhead.salesforce.com/content/learn/trails/service_cloud_consultant'
     }
-  },
-  // Continue with all other certifications following the same pattern...
-  // Add remaining consultants, architects, marketers, developers, and AI certifications
+  }
 ];
 
-// Export helper function to get certifications by category
 export const getCertificationsByCategory = (category) => {
   return certifications.filter(cert => cert.category === category);
 };

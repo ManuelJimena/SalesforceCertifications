@@ -12,12 +12,7 @@ body {
   color: $sf-black;
   background-color: $sf-white;
   line-height: 1.6;
-}
-
-#root {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  overflow-x: hidden;
 }
 
 .app {
@@ -26,29 +21,18 @@ body {
   min-height: 100vh;
 }
 
-.container {
-  width: 100%;
-  margin: 0 auto;
-}
-
 .main-content {
   flex: 1;
-  min-height: calc(100vh - 140px); // Altura aproximada de header + footer
+  width: 100%;
+  max-width: 100%;
   padding: 0;
-
-  > * {
-    padding: 0 max(2rem, calc((100% - $content-max-width) / 2));
-
-    @media (max-width: $mobile) {
-      padding: 0 1rem;
-    }
-  }
+  margin: 0;
 }
 
 // Navigation
 .navbar {
   background-color: $sf-blue;
-  padding: 1rem 0;
+  padding: 1rem;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -58,7 +42,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 2rem;
+    max-width: $content-max-width;
+    margin: 0 auto;
+    padding: 0 1rem;
   }
 
   &__logo {
@@ -78,7 +64,10 @@ body {
 
 // Home page
 .home {
-  padding: 2rem 0;
+  max-width: $content-max-width;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  width: 100%;
 
   &__filters {
     display: flex;
@@ -142,8 +131,8 @@ body {
 .certifications-grid {
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  max-width: $content-max-width;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  width: 100%;
   margin: 0 auto;
 
   @media (min-width: $desktop) {
@@ -174,8 +163,10 @@ body {
 
   &__image {
     width: 100%;
-    height: 160px;
-    object-fit: cover;
+    height: 140px;
+    object-fit: contain;
+    background-color: $sf-light-gray;
+    padding: 1rem;
   }
 
   &__content {
@@ -211,7 +202,7 @@ body {
 .footer {
   background-color: $sf-dark-blue;
   color: $sf-white;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
   margin-top: auto;
   width: 100%;
 
@@ -221,7 +212,8 @@ body {
     align-items: center;
     gap: 1rem;
     text-align: center;
-    padding: 0 2rem;
+    max-width: $content-max-width;
+    margin: 0 auto;
   }
 
   &__github {
