@@ -549,13 +549,7 @@ export const certifications = [
       trailhead: 'https://trailhead.salesforce.com/credentials/omnistudioconsultant',
       trailmix: 'https://trailhead.salesforce.com/content/learn/trails/omnistudio-consultant'
     }
-  }
-  // ARCHITECTS
-  export const categories = {
-  ARCHITECTS: 'Architects'
-};
-
-export const certifications = [
+  },
   // ARCHITECTS
   {
     id: 'identity-access-management-architect',
@@ -855,7 +849,7 @@ export const certifications = [
       trailhead: 'https://trailhead.salesforce.com/credentials/catalystspecialist',
       trailmix: 'https://trailhead.salesforce.com/users/strailhead/trailmixes/catalyst-methodology'
     }
-  }.
+  },
   {
     id: 'marketing-cloud-administrator',
     title: 'Marketing Cloud Administrator',
